@@ -1,80 +1,86 @@
-/* 1. Variables pour changer les couleurs facilement partout */
+/* ============================================================
+   SAÉ 1.04 - DESIGN MAUVE PASTEL PREMIUM
+   Auteur : Héloïse Filaumart
+   ============================================================ */
+
 :root {
-    --couleur-principale: #009688; /* Le Teal de W3.CSS */
-    --couleur-fond: #f1f1f1;
-    --couleur-texte: #333;
+    --primary: #6a1b9a;       /* Mauve profond */
+    --accent: #9c27b0;        /* Mauve vif */
+    --bg-page: #fdfbff;       /* Fond mauve très pâle */
+    --glass: rgba(255, 255, 255, 0.85);
+    --border: rgba(156, 39, 176, 0.15);
 }
 
-/* 2. Comportement global */
-html {
-    scroll-behavior: smooth; /* Défilement fluide */
-}
-
+/* Base - Le défilement est instantané ici (pas de smooth scroll) */
 body {
-    background-color: var(--couleur-fond);
-    color: var(--couleur-texte);
-    line-height: 1.6;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-page);
+    color: #333;
+    margin: 0;
 }
 
-/* 3. Navigation "Sticky" (Reste en haut) */
+/* Navigation fixe */
 nav {
-    position: sticky;
-    top: 0;
+    background: var(--glass) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* 4. Effets sur les liens du menu */
-.w3-bar-item {
-    transition: 0.3s; /* Animation douce au survol */
+/* Section Accueil (Hero) */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #fdfbfb 0%, #f3e5f5 100%);
 }
 
-.w3-bar-item:hover {
-    background-color: var(--couleur-principale) !important;
-    color: white !important;
+.hero-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 10px 30px rgba(106, 27, 154, 0.2);
+    margin-bottom: 20px;
+    object-fit: cover;
 }
 
-/* 5. Espacement entre les sections */
+/* Sections et Cartes */
 section {
-    padding-top: 20px;
+    padding: 100px 20px;
+    min-height: 80vh;
+}
+
+.card-premium {
+    background: var(--glass);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+    transition: 0.3s ease;
+}
+
+.card-premium:hover {
+    transform: scale(1.02);
+    border-color: var(--accent);
+}
+
+/* Titres */
+h2 {
+    color: var(--primary);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
     margin-bottom: 40px;
 }
 
-/* 6. Style pour les cartes de compétences (Progress Bars) */
-.w3-container.w3-teal {
-    transition: width 1.5s ease-in-out; /* Animation des barres de compétences */
-}
-
-/* 7. Footer */
-footer {
-    padding: 32px;
-    margin-top: 64px;
-}
-
-/* Animation du bouton de téléchargement */
-.w3-button.w3-teal {
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.w3-button.w3-teal:hover {
-    transform: translateY(-3px); /* Le bouton se soulève au survol */
-    box-shadow: 0 4px 15px rgba(0,150,136,0.4);
-}
-
-/* --- Ajout de la police et des couleurs de CV.html --- */
-
-/* Applique la police Roboto à tout le texte */
-html, body, h1, h2, h3, h4, h5, h6 { 
-    font-family: "Roboto", sans-serif; 
-}
-
-/* Assure que le Teal soit bien le bon vert */
-.w3-teal, .w3-hover-teal:hover { 
-    color: #fff !important; 
-    background-color: #009688 !important; 
-}
-
-/* Espacement sous le menu */
-nav { 
-    margin-bottom: 20px; 
-}
+/* Formulaire */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px

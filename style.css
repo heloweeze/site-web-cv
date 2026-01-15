@@ -1,0 +1,80 @@
+/* 1. Variables pour changer les couleurs facilement partout */
+:root {
+    --couleur-principale: #009688; /* Le Teal de W3.CSS */
+    --couleur-fond: #f1f1f1;
+    --couleur-texte: #333;
+}
+
+/* 2. Comportement global */
+html {
+    scroll-behavior: smooth; /* Défilement fluide */
+}
+
+body {
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+}
+
+/* 3. Navigation "Sticky" (Reste en haut) */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 4. Effets sur les liens du menu */
+.w3-bar-item {
+    transition: 0.3s; /* Animation douce au survol */
+}
+
+.w3-bar-item:hover {
+    background-color: var(--couleur-principale) !important;
+    color: white !important;
+}
+
+/* 5. Espacement entre les sections */
+section {
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* 6. Style pour les cartes de compétences (Progress Bars) */
+.w3-container.w3-teal {
+    transition: width 1.5s ease-in-out; /* Animation des barres de compétences */
+}
+
+/* 7. Footer */
+footer {
+    padding: 32px;
+    margin-top: 64px;
+}
+
+/* Animation du bouton de téléchargement */
+.w3-button.w3-teal {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.w3-button.w3-teal:hover {
+    transform: translateY(-3px); /* Le bouton se soulève au survol */
+    box-shadow: 0 4px 15px rgba(0,150,136,0.4);
+}
+
+/* --- Ajout de la police et des couleurs de CV.html --- */
+
+/* Applique la police Roboto à tout le texte */
+html, body, h1, h2, h3, h4, h5, h6 { 
+    font-family: "Roboto", sans-serif; 
+}
+
+/* Assure que le Teal soit bien le bon vert */
+.w3-teal, .w3-hover-teal:hover { 
+    color: #fff !important; 
+    background-color: #009688 !important; 
+}
+
+/* Espacement sous le menu */
+nav { 
+    margin-bottom: 20px; 
+}

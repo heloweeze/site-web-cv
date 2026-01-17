@@ -31,4 +31,8 @@ Le site est composé de plusieurs pages pour une meilleure organisation :
 Je met régulièrement à jour mon site depuis le terminal de VScode :   
 git add .   
 git commit -m "Message clair"   
-git push
+git push   
+Si il y a erreur de rejet :
+git pull origin main --rebase   
+git push   
+

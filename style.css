@@ -1,10 +1,7 @@
-/* ============================================================
-   DESIGN AQUA/BLEU CIEL AVEC MENU LATÉRAL GAUCHE
-   ============================================================ */
 :root {
-    /* Couleurs extraites de ton CV */
-    --primary: #5c8d8d;      /* Un bleu-vert sourd plus pro pour les titres */
-    --accent: #d1e7e7;       /* Le bleu-vert très clair du fond de ton CV */
+    /* Couleurs extraites de mon CV */
+    --primary: #5c8d8d;      /* Un bleu-vert sourd pour les titres */
+    --accent: #d1e7e7;       /* Le bleu-vert très clair pour le fond*/
     --bg-page: #f4f9f9;      /* Fond de page légèrement teinté */
     --sidebar-width: 250px;
 }
@@ -47,12 +44,12 @@ body {
 }
 
 .sidebar a:hover, .sidebar a.active {
-    background-color: var(--accent); /* Utilisation de la couleur de ton CV */
+    background-color: var(--accent); /* Utilisation de la couleur de mon CV */
     color: var(--primary);
     border-right: 4px solid var(--primary);
 }
 
-/* CONTENU PRINCIPAL (Décalé à cause du menu) */
+/* CONTENU PRINCIPAL */
 .main-content {
     margin-left: var(--sidebar-width);
     padding: 40px;

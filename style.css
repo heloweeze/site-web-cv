@@ -1,10 +1,11 @@
 /* ============================================================
-   DESIGN MAUVE AVEC MENU LATÉRAL GAUCHE
+   DESIGN AQUA/BLEU CIEL AVEC MENU LATÉRAL GAUCHE
    ============================================================ */
 :root {
-    --primary: #6a1b9a;
-    --accent: #9c27b0;
-    --bg-page: #fdfbff;
+    /* Couleurs extraites de ton CV */
+    --primary: #5c8d8d;      /* Un bleu-vert sourd plus pro pour les titres */
+    --accent: #d1e7e7;       /* Le bleu-vert très clair du fond de ton CV */
+    --bg-page: #f4f9f9;      /* Fond de page légèrement teinté */
     --sidebar-width: 250px;
 }
 
@@ -46,7 +47,7 @@ body {
 }
 
 .sidebar a:hover, .sidebar a.active {
-    background-color: #f3e5f5;
+    background-color: var(--accent); /* Utilisation de la couleur de ton CV */
     color: var(--primary);
     border-right: 4px solid var(--primary);
 }
@@ -67,7 +68,8 @@ body {
     margin-bottom: 20px;
 }
 
-.btn-mauve {
+/* Correction de btn-custom pour la logique de couleur */
+.btn-custom { 
     background: var(--primary);
     color: white;
     padding: 12px 25px;

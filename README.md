@@ -28,7 +28,7 @@ Le site est composé de plusieurs pages pour une meilleure organisation :
 - `contact.html` : Formulaire de contact.
 
 ##  Mise à jour du site
-Je met régulièrement à jour mon site depuis le terminal de VScode :
-git add .
-git commit -m "Message clair"
+Je met régulièrement à jour mon site depuis le terminal de VScode :   
+git add .   
+git commit -m "Message clair"   
 git push

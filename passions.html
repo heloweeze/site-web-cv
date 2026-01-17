@@ -7,69 +7,98 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="w3-light-grey">
+<body>
 
-    <nav class="w3-bar w3-white w3-card">
-        <a href="index.html" class="w3-bar-item w3-button">Accueil</a>
-        <a href="projets.html" class="w3-bar-item w3-button">Projets</a>
-        <a href="cv.html" class="w3-bar-item w3-button">CV</a>
-        <a href="passions.html" class="w3-bar-item w3-button w3-teal">Passions</a>
-        <a href="download.html" class="w3-bar-item w3-button">Télécharger mon CV</a>
+    <nav class="sidebar">
+        <div style="padding: 20px; text-align: center;">
+            <h3 style="color: var(--primary); font-weight: bold; margin: 0; letter-spacing: 2px;">HELOÏSE.F</h3>
+        </div>
+        
+        <a href="index.html" class="active"><i class="fa fa-home w3-margin-right"></i>Accueil</a>
+        <hr>
+        <a href="parcours.html"><i class="fa fa-graduation-cap w3-margin-right"></i>Formation</a>
+        <a href="experiences.html"><i class="fa fa-suitcase w3-margin-right"></i>Expériences</a>
+        <a href="competences.html"><i class="fa fa-gears w3-margin-right"></i>Compétences</a>
+        <a href="softskills.html"><i class="fa fa-user w3-margin-right"></i>Soft Skills</a>
+        <hr>
+        <a href="projets.html"><i class="fa fa-desktop w3-margin-right"></i>Projets</a>
+        <a href="passions.html"><i class="fa fa-heart w3-margin-right"></i>Passions</a>
+        <a href="contact.html"><i class="fa fa-envelope w3-margin-right"></i>Contact</a>
+        
+        <a href="telechargement.html" style="margin-top:auto; background: var(--primary); color:white; text-align: center;">
+            <i class="fa fa-download w3-margin-right"></i>Mon CV PDF
+        </a>
     </nav>
 
-    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+    <div class="main-content">
+        <header class="w3-container w3-padding-32">
+            <h1 class="w3-text-purple w3-border-bottom w3-border-purple" style="display:inline-block; padding-bottom:10px;">
+                Mes Centres d'Intérêt
+            </h1>
+            <p class="w3-text-grey">Découvrez quelle sont mes occupations en dehors de mes études en Réseaux & Télécommunications.</p>
+        </header>
+
         <div class="w3-row-padding">
-            <main class="w3-col l12"> <section class="w3-container w3-card w3-white">
-                    <h2 class="w3-text-grey w3-padding-16">Mes Centres d'Intérêt</h2>
-                    
-                    <div class="w3-row-padding">
-    
-    <div class="w3-col l4 m5">
-        
-        <div class="w3-container w3-margin-bottom">
-            <h4><i class="fa fa-users w3-text-teal"></i> Volontariat</h4>
-            <p>En tant que Jeune Cadet, j'ai appris la rigueur, la discipline et l'importance du collectif. J'ai aussi développer ma culture en participant aux Jury Ecran Jeunes.</p>
-        </div>
+            
+            <div class="w3-col l5 m6">
+                
+                <div class="card-premium w3-margin-bottom">
+                    <h4><i class="fa fa-users w3-text-purple w3-margin-right"></i>Volontariat</h4>
+                    <p>En tant que Jeune Cadet, j'ai appris la rigueur, la discipline et l'importance du collectif. J'ai aussi développée ma culture en participant aux Jury Écran Jeunes.</p>
+                </div>
 
-        <div class="w3-container w3-margin-bottom">
-            <h4><i class="fa fa-mobile w3-text-teal"></i> Veille Technologique</h4>
-            <p>Je m'intéresse particulièrement au chiffrement de données et je reste à l'affût des nouveautés via Google Alerts.</p>
-        </div>
+                <div class="card-premium w3-margin-bottom">
+                    <h4><i class="fa fa-shield w3-text-purple w3-margin-right"></i>Veille Technologique</h4>
+                    <p>Je m'intéresse particulièrement au chiffrement de données et je reste à l'affût des nouveautés via Google Alerts.</p>
+                </div>
 
-        <div class="w3-container w3-margin-bottom">
-            <h4><i class="fa fa-gamepad w3-text-teal"></i> Jeux Vidéos</h4>
-            <p>Passionnée par l'univers des consoles, je m'intéresse de plus en plus à leur développement.</p>
-        </div>
+                <div class="card-premium w3-margin-bottom">
+                    <h4><i class="fa fa-gamepad w3-text-purple w3-margin-right"></i>Jeux Vidéo</h4>
+                    <p>Passionnée par l'univers des consoles, je m'intéresse de plus en plus à leur aspect technique et à leur développement.</p>
+                </div>
 
-        <div class="w3-container w3-margin-bottom">
-            <h4><i class="fa fa-music w3-text-teal"></i> Musique</h4>
-            <p>Ancienne élève en classe orchestre (Cor et Violoncelle), j'ai réalisée plusieurs prestations avec mon groupe à la Réunion.</p>
-        </div>
-        
-    </div>
+                <div class="card-premium w3-margin-bottom">
+                    <h4><i class="fa fa-music w3-text-purple w3-margin-right"></i>Musique</h4>
+                    <p>Ancienne élève en classe orchestre, j'ai réalisée plusieurs prestations avec mon groupe à la Réunion. J'ai eu l'honneur de joué du Cor dès mon plus jeune âge et par la suite du Violoncelle.</p>
+                </div>
 
-    <div class="w3-col l8 m7">
-        <div class="w3-container w3-card w3-light-grey w3-round-large w3-padding-16">
-            <h4><i class="fa fa-soccer-ball-o w3-text-teal"></i> Football : Ma passion principale</h4>
-            <img src="img/foot.jpg" style="width:100%" class="w3-round w3-margin-bottom" alt="Héloïse au foot">
-            <p>Depuis ma jeunesse, j'ai une passion pour ce sport. J'ai commencée en club à l'AS Capricorne féminine pendant 3 ans. C'est une passion qui m'a apprise la persévérance et l'esprit d'équipe.</p>
-        </div>
-    </div>
+                <div class="card-premium w3-margin-bottom">
+                    <h4><i class="fa fa-gamepad w3-text-purple w3-margin-right"></i>s</h4>
+                    <p>s</p>
+                </div>
 
-</div>
+                <div class="card-premium w3-margin-bottom">
+                    <h4><i class="fa fa-music w3-text-purple w3-margin-right"></i>s</h4>
+                    <p>s</p>
+                </div>
+            </div>
+
+            <div class="w3-col l5 m6">
+                <div class="card-premium w3-center">
+                    <h3 class="w3-text-purple"><i class="fa fa-soccer-ball-o"></i> Football : Ma passion principale</h3>
+                    <img src="img/foot.jpg" style="width:100%; max-height:500px; object-fit:cover;" class="w3-round-large w3-card-4 w3-margin-top w3-margin-bottom" alt="Héloïse au foot">
+                    <div class="w3-container w3-padding">
+                        <p class="w3-large">Depuis ma jeunesse, j'ai une passion pour ce sport. J'ai commencée en club à l'AS Capricorne féminine pendant 3 ans. Beaucoup d'autres sports m'inspire tout de même.</p>
+                        <p class="w3-text-grey">C'est une passion qui m'a appris la persévérance, le dépassement de soi et l'esprit d'équipe.</p>
                     </div>
-                    <br>
-                </section>
-            </main>
+                </div>
+            </div>
+
         </div>
+
+        <footer class="w3-container w3-padding-64 w3-center">
+            <hr style="border-top: 1px solid #ddd">
+            <p class="w3-text-grey">Retrouvez-moi sur mes réseaux professionnels.</p>
+            <div class="w3-xlarge w3-section">
+                <a href="https://linkedin.com/in/heloise-filaumart" target="_blank"><i class="fa fa-linkedin w3-hover-opacity w3-text-purple"></i></a>
+                <a href="https://github.com/heloweeze" target="_blank"><i class="fa fa-github w3-hover-opacity w3-text-purple w3-margin-left"></i></a>
+                <a href="mailto:h.filaumart@rt-iut.re"><i class="fa fa-envelope w3-hover-opacity w3-text-purple"></i></a>
+            </div>
+            <p class="w3-small w3-text-grey">Héloïse Filaumart</p>
+        </footer>
     </div>
-    
-        <footer class="w3-container w3-teal w3-center w3-margin-top">
-        <p>Retrouvez-moi sur mes réseaux professionnels.</p>
-        <a href="https://linkedin.com/in/heloise-filaumart" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-        <a href="https://github.com/heloweeze" target="_blank" class="w3-hover-opacity"><i class="fa fa-github w3-xxlarge w3-text-white"></i></a>
-        <p>Réalisé dans le cadre de la SAÉ 1.04 - Héloïse Filaumart</p>
-    </footer>
+
 </body>
 </html>

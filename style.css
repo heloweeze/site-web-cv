@@ -1,86 +1,94 @@
 /* ============================================================
-   SAÉ 1.04 - DESIGN MAUVE PASTEL PREMIUM
-   Auteur : Héloïse Filaumart
+   DESIGN MAUVE AVEC MENU LATÉRAL GAUCHE
    ============================================================ */
-
 :root {
-    --primary: #6a1b9a;       /* Mauve profond */
-    --accent: #9c27b0;        /* Mauve vif */
-    --bg-page: #fdfbff;       /* Fond mauve très pâle */
-    --glass: rgba(255, 255, 255, 0.85);
-    --border: rgba(156, 39, 176, 0.15);
+    --primary: #6a1b9a;
+    --accent: #9c27b0;
+    --bg-page: #fdfbff;
+    --sidebar-width: 250px;
 }
 
-/* Base - Le défilement est instantané ici (pas de smooth scroll) */
 body {
-    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: var(--bg-page);
-    color: #333;
     margin: 0;
-}
-
-/* Navigation fixe */
-nav {
-    background: var(--glass) !important;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-    z-index: 1000;
-}
-
-/* Section Accueil (Hero) */
-.hero {
-    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(135deg, #fdfbfb 0%, #f3e5f5 100%);
 }
 
-.hero-img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    border: 6px solid white;
-    box-shadow: 0 10px 30px rgba(106, 27, 154, 0.2);
+/* MENU LATÉRAL FIXE */
+.sidebar {
+    height: 100%;
+    width: var(--sidebar-width);
+    background-color: #fff;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-right: 2px solid #eee;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h3 {
+    text-align: center;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: #f3e5f5;
+    color: var(--primary);
+    border-right: 4px solid var(--primary);
+}
+
+/* CONTENU PRINCIPAL (Décalé à cause du menu) */
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 40px;
+    width: 100%;
+}
+
+/* CARTES ET BLOCS */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     margin-bottom: 20px;
+}
+
+.btn-mauve {
+    background: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* ACCUEIL HERO */
+.hero-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     object-fit: cover;
 }
 
-/* Sections et Cartes */
-section {
-    padding: 100px 20px;
-    min-height: 80vh;
+/* RESPONSIVE : Si l'écran est petit */
+@media screen and (max-width: 700px) {
+    body { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; position: relative; }
+    .main-content { margin-left: 0; }
 }
-
-.card-premium {
-    background: var(--glass);
-    border-radius: 20px;
-    padding: 30px;
-    border: 1px solid white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-    margin-bottom: 25px;
-    transition: 0.3s ease;
-}
-
-.card-premium:hover {
-    transform: scale(1.02);
-    border-color: var(--accent);
-}
-
-/* Titres */
-h2 {
-    color: var(--primary);
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 3px solid var(--accent);
-    display: inline-block;
-    margin-bottom: 40px;
-}
-
-/* Formulaire */
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px

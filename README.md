@@ -18,14 +18,14 @@ Ce projet est mon portfolio professionnel réalisé dans le cadre de ma premièr
 
 ## Structure du projet
 Le site est composé de plusieurs pages pour une meilleure organisation :
-- `index.html` : Accueil et présentation rapide.
-- `parcours.html` : Détails de ma formation académique.
+- `index.html` : Accueil et présentation.
+- `parcours.html` : Détails de ma formation académique et des formations complémentaires.
 - `experiences.html` : Mon parcours au RSMA-R et mes engagements culturels.
-- `competences.html` : Mes outils techniques (Dev, Réseaux, Bases de données).
+- `competences.html` : Mes compétences techniques ainsi que les outils.
 - `softskills.html` : Mes qualités humaines et professionnelles.
 - `projets.html` : Zoom sur mes réalisations concrètes.
 - `passions.html` : Mes centres d'intérêt hors études.
-- `contact.html` : Formulaire de contact opérationnel.
+- `contact.html` : Formulaire de contact.
 
 ##  Mise à jour du site
 Je met régulièrement à jour mon site depuis le terminal de VScode :

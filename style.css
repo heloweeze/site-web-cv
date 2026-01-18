@@ -1,133 +1,172 @@
 :root {
-    /* Couleurs extraites de mon CV */
-    --primary: #5c8d8d;      /* Un bleu-vert sourd pour les titres */
-    --accent: #d1e7e7;       /* Le bleu-vert très clair pour le fond*/
-    --bg-page: #f4f9f9;      /* Fond de page légèrement teinté */
+    /* Couleurs harmonisées */
+    --primary: #5c8d8d;      /* Bleu-vert sourd (Titres et Boutons) */
+    --primary-dark: #4a7272; /* Version plus sombre pour le survol */
+    --accent: #d1e7e7;       /* Bleu-vert très clair (Fond de menu actif) */
+    --bg-page: #f4f9f9;      /* Fond de page très légèrement teinté */
     --sidebar-width: 250px;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+/* --- BASES --- */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--bg-page);
     margin: 0;
+    color: #333;
     display: flex;
+    line-height: 1.6;
 }
 
-/* MENU LATÉRAL FIXE */
+/* --- MENU LATÉRAL FIXE --- */
 .sidebar {
-    height: 100%;
+    height: 100vh;
     width: var(--sidebar-width);
-    background-color: #fff;
+    background-color: #ffffff;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     left: 0;
-    border-right: 2px solid #eee;
-    padding-top: 20px;
+    border-right: 1px solid #e0e0e0;
     display: flex;
     flex-direction: column;
-}
-
-.sidebar h3 {
-    text-align: center;
-    color: var(--primary);
-    font-weight: bold;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.02);
 }
 
 .sidebar a {
-    padding: 15px 25px;
+    padding: 12px 25px;
     text-decoration: none;
-    font-size: 16px;
-    color: #333;
+    font-size: 15px;
+    color: #555;
     display: block;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
 }
 
-.sidebar a:hover, .sidebar a.active {
-    background-color: var(--accent); /* Utilisation de la couleur de mon CV */
+.sidebar a:hover {
+    background-color: var(--bg-page);
     color: var(--primary);
-    border-right: 4px solid var(--primary);
+    padding-left: 30px; /* Petit effet de glissement */
 }
 
-/* CONTENU PRINCIPAL */
+.sidebar a.active {
+    background-color: var(--accent);
+    color: var(--primary);
+    font-weight: bold;
+    border-left: 4px solid var(--primary);
+}
+
+.sidebar hr {
+    margin: 10px 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+/* --- CONTENU PRINCIPAL --- */
 .main-content {
     margin-left: var(--sidebar-width);
     padding: 40px;
     width: 100%;
+    min-height: 100vh;
 }
 
-/* CARTES ET BLOCS */
-.card {
+/* --- CARTES PREMIUM --- */
+.card-premium {
     background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.02);
+    height: 100%; /* Pour que les cartes d'une même ligne aient la même taille */
 }
 
-/* Correction de btn-custom pour la logique de couleur */
+.card-premium:hover {
+    transform: translateY(-5px); /* Soulèvement au survol */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* --- BOUTONS --- */
 .btn-custom { 
-    background: var(--primary);
-    color: white;
-    padding: 12px 25px;
-    border-radius: 8px;
+    background-color: var(--primary);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 6px;
     text-decoration: none;
     display: inline-block;
+    transition: background 0.3s ease;
+    border: none;
+    font-weight: 600;
 }
 
-/* ACCUEIL HERO */
+.btn-custom:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- TAGS (SAÉ / Compétences) --- */
+.w3-tag {
+    margin: 4px 2px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* --- IMAGES --- */
 .hero-img {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border: 8px solid white;
+    box-shadow: var(--shadow);
     object-fit: cover;
 }
 
-/* RESPONSIVE : Si l'écran est petit */
-@media screen and (max-width: 700px) {
-    body { flex-direction: column; }
-    .sidebar { width: 100%; height: auto; position: relative; }
-    .main-content { margin-left: 0; }
-}
-
-/* --- ADAPTATION MOBILE --- */
+/* --- RESPONSIVE : TABLETTES ET MOBILES --- */
 @media screen and (max-width: 992px) {
-    /* La sidebar devient une barre horizontale en haut */
+    body {
+        flex-direction: column;
+    }
+
     .sidebar {
         width: 100%;
         height: auto;
         position: relative;
-        display: flex;
         flex-direction: row;
-        flex-wrap: wrap; /* Permet aux liens de passer à la ligne si besoin */
-        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 0;
+        border-right: none;
+        border-bottom: 1px solid #eee;
     }
 
-    /* On cache le logo et les lignes (hr) sur mobile pour gagner de la place */
-    .sidebar h3, .sidebar hr {
-        display: none;
+    .sidebar div:first-child, .sidebar hr {
+        display: none; /* Cache le logo et les barres sur mobile */
     }
 
-    /* On ajuste les liens pour qu'ils soient côte à côte */
     .sidebar a {
-        padding: 10px 15px;
-        font-size: 14px;
-        flex: 1; /* Les liens prennent la même largeur */
+        flex: 1;
+        min-width: 120px;
         text-align: center;
+        padding: 10px 5px;
+        font-size: 13px;
+        border-left: none;
+        border-bottom: 3px solid transparent;
     }
 
-    /* On retire la marge de gauche du contenu principal */
-    .main-content {
-        margin-left: 0 !important;
-        padding: 10px;
+    .sidebar a.active {
+        border-left: none;
+        border-bottom: 3px solid var(--primary);
     }
-    
-    /* Le bouton de téléchargement ne doit pas prendre toute la place en bas du menu */
+
     .sidebar a[href="telechargement.html"] {
-        margin-top: 0 !important;
         width: 100%;
         flex: none;
+        background: var(--primary);
+        color: white;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
     }
 }

@@ -12,6 +12,7 @@
 
 <body>
 
+    <!-- Menu navigation -->
     <nav class="sidebar">
         <div style="padding: 20px; text-align: center;">
             <h3 style="color: var(--primary); font-weight: bold; margin: 0; letter-spacing: 2px;">HELOÏSE.F</h3>
@@ -33,52 +34,58 @@
         </a>
     </nav>
 
+    <!-- Le ruban -->
     <div class="main-content">
         <header class="w3-container w3-padding-32">
             <h1 style="color: var(--primary); border-bottom: 2px solid var(--primary); display:inline-block;">Me Contacter</h1>
         </header>
 
         <div class="w3-container">
-            <div class="card-premium" style="max-width: 700px;">
-                <p>Un projet, une question ou une opportunité d'alternance ? N'hésitez pas à m'envoyer un message via le formulaire ci-dessous.</p>
+            <div class="card-premium" style="max-width: 800px; margin: auto;">
+                <p class="w3-large">Un projet, une question ou une opportunité d'alternance ?</p>
+                <p>N'hésitez pas à m'envoyer un message via le formulaire ci-dessous, je vous répondrai dans les plus brefs délais.</p>
 
-                <form action="https://formspree.io/f/xjgggajl" method="POST" class="w3-container">
+                <form action="https://formspree.io/f/xjgggajl" method="POST" class="w3-container w3-padding-16">
                     
                     <div class="w3-row-padding" style="margin:0 -16px;">
                         <div class="w3-half w3-margin-bottom">
-                            <label style="color: var(--primary);"><b>Prénom</b></label>
-                            <input class="w3-input w3-border w3-round" type="text" name="first_name" placeholder="Ex: Jean" required>
+                            <label for="prenom" style="color: var(--primary);"><b>Prénom</b></label>
+                            <input id="prenom" class="w3-input w3-border w3-round" type="text" name="first_name" placeholder="Ex: Jean" required>
                         </div>
                         <div class="w3-half w3-margin-bottom">
-                            <label style="color: var(--primary);"><b>Nom</b></label>
-                            <input class="w3-input w3-border w3-round" type="text" name="last_name" placeholder="Ex: Dupont" required>
+                            <label for="nom" style="color: var(--primary);"><b>Nom</b></label>
+                            <input id="nom" class="w3-input w3-border w3-round" type="text" name="last_name" placeholder="Ex: Dupont" required>
                         </div>
                     </div>
                     
-                    <label style="color: var(--primary);"><b>Email</b></label>
-                    <input class="w3-input w3-border w3-round w3-margin-bottom" type="email" name="email" placeholder="votre@email.com" required>
+                    <div class="w3-margin-bottom">
+                        <label for="email" style="color: var(--primary);"><b>Email</b></label>
+                        <input id="email" class="w3-input w3-border w3-round" type="email" name="email" placeholder="votre@email.com" required>
+                    </div>
                     
-                    <label style="color: var(--primary);"><b>Message</b></label>
-                    <textarea class="w3-input w3-border w3-round w3-margin-bottom" name="message" style="height:150px" placeholder="Votre message ici..." required></textarea>
+                    <div class="w3-margin-bottom">
+                        <label for="message" style="color: var(--primary);"><b>Message</b></label>
+                        <textarea id="message" class="w3-input w3-border w3-round" name="message" style="height:150px; resize: vertical;" placeholder="Votre message ici..." required></textarea>
+                    </div>
                     
-                    <button type="submit" class="btn-custom w3-block w3-round-large" style="border:none; cursor:pointer; padding:15px;">
-                        <i class="fa fa-paper-plane"></i> Envoyer mon message
+                    <button type="submit" class="btn-custom w3-block w3-round-large" style="border:none; cursor:pointer; padding:15px; font-weight: bold;">
+                        <i class="fa fa-paper-plane w3-margin-right"></i> Envoyer mon message
                     </button>
                 </form>
             </div>
         </div>
 
+        <!-- Pied de page -->
         <footer class="w3-container w3-padding-64 w3-center">
             <hr style="border-top: 1px solid #ddd">
-            <p class="w3-text-grey">Retrouvez-moi sur mes réseaux professionnels.</p>
+            <p class="w3-text-grey">Retrouvez-moi également sur mes réseaux professionnels.</p>
             <div class="w3-xlarge w3-section">
-                <a href="https://www.linkedin.com/in/h%C3%A9lo%C3%AFse-filaumart-3955b53a0" target="_blank"><i class="fa fa-linkedin w3-hover-opacity" style="color: var(--primary);"></i></a>
-                <a href="https://github.com/heloweeze" target="_blank"><i class="fa fa-github w3-hover-opacity w3-margin-left" style="color: var(--primary);"></i></a>
-                <a href="mailto:h.filaumart@rt-iut.re" class="w3-margin-left"><i class="fa fa-envelope w3-hover-opacity" style="color: var(--primary);"></i></a>
+                <a href="https://www.linkedin.com/in/h%C3%A9lo%C3%AFse-filaumart-3955b53a0" target="_blank" title="LinkedIn"><i class="fa fa-linkedin w3-hover-opacity" style="color: var(--primary);"></i></a>
+                <a href="https://github.com/heloweeze" target="_blank" class="w3-margin-left" title="GitHub"><i class="fa fa-github w3-hover-opacity" style="color: var(--primary);"></i></a>
+                <a href="mailto:h.filaumart@rt-iut.re" class="w3-margin-left" title="Email"><i class="fa fa-envelope w3-hover-opacity" style="color: var(--primary);"></i></a>
             </div>
-            <p class="w3-small w3-text-grey">Héloïse Filaumart </p>
+            <p class="w3-small w3-text-grey">Héloïse Filaumart © 2026</p>
         </footer>
-
     </div>
     
 </body>

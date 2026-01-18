@@ -91,3 +91,43 @@ body {
     .sidebar { width: 100%; height: auto; position: relative; }
     .main-content { margin-left: 0; }
 }
+
+/* --- ADAPTATION MOBILE --- */
+@media screen and (max-width: 992px) {
+    /* La sidebar devient une barre horizontale en haut */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* Permet aux liens de passer à la ligne si besoin */
+        justify-content: center;
+    }
+
+    /* On cache le logo et les lignes (hr) sur mobile pour gagner de la place */
+    .sidebar h3, .sidebar hr {
+        display: none;
+    }
+
+    /* On ajuste les liens pour qu'ils soient côte à côte */
+    .sidebar a {
+        padding: 10px 15px;
+        font-size: 14px;
+        flex: 1; /* Les liens prennent la même largeur */
+        text-align: center;
+    }
+
+    /* On retire la marge de gauche du contenu principal */
+    .main-content {
+        margin-left: 0 !important;
+        padding: 10px;
+    }
+    
+    /* Le bouton de téléchargement ne doit pas prendre toute la place en bas du menu */
+    .sidebar a[href="telechargement.html"] {
+        margin-top: 0 !important;
+        width: 100%;
+        flex: none;
+    }
+}

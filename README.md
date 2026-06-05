@@ -2,12 +2,16 @@
 
 Ce projet est mon portfolio professionnel réalisé dans le cadre de ma première année de BUT Réseaux & Télécommunications (SAÉ 1.04). L'objectif est de présenter mon parcours, mes compétences techniques et mes engagements personnels de manière interactive et moderne.
 
-🔗 **Lien du site :** [https://github.com/heloweeze/site-web-cv](https://heloweeze.github.io/site-web-cv/)
+🔗 **Lien du site :** [Site](https://heloweeze.github.io/site-web-cv/)
+
+---
 
 ## Fonctionnalités
 - **Navigation fluide :** Une barre latérale fixe pour accéder facilement aux différentes sections.
 - **Design Responsive :** Adapté aux écrans d'ordinateurs, tablettes et smartphones.
 - **Formulaire de Contact :** Intégration avec Formspree pour recevoir des messages directement.
+
+---
 
 ## Technologies utilisées
 - **Langages :** HTML5 et CSS3.
@@ -15,6 +19,8 @@ Ce projet est mon portfolio professionnel réalisé dans le cadre de ma premièr
 - **Icônes :** Font Awesome 4.7.
 - **Hébergement :** GitHub Pages.
 - **Outils :** Visual Studio Code, Git.
+
+---
 
 ## Structure du projet
 Le site est composé de plusieurs pages pour une meilleure organisation :
@@ -27,12 +33,4 @@ Le site est composé de plusieurs pages pour une meilleure organisation :
 - `passions.html` : Mes centres d'intérêt hors études.
 - `contact.html` : Formulaire de contact.
 
-##  Mise à jour du site
-- Je met régulièrement à jour mon site depuis le terminal de VScode :   
-git add .   
-git commit -m "Message clair"   
-git push   
-- Si il y a erreur de rejet :   
-git pull origin main --rebase   
-git push   
-
+Tout droits réservés.
